@@ -1,9 +1,9 @@
 {
-  "name": "mclog",
+  "name": "mchastainfm/mclog",
   "type": "library",
   "description": "my php logging tool",
   "keywords": ["logging"],
-  "homepage": "https://github.com/mchastainfm/mcgitlog",
+  "homepage": "https://github.com/mchastainfm/mclog",
   "license": "MIT",
   "authors": [
     {
@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Mclog": "src/"
+      "Mclog\\": "src/"
     }
   }
 }
