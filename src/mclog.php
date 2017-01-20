@@ -1,9 +1,13 @@
 <?php
 
-namespace Mclog;
+namespace mclog;
 
-class McLog
+class mclog
 {
+    public function __construct()
+        {
+            return "mclog construct run";
+        }
     public static function log($logMessage = 'mclog',$logVar = "no variable set", $end = "")
         {
             $toLog = $logVar;
