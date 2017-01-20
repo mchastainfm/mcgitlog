@@ -1,5 +1,6 @@
 {
   "name": "mclog",
+  "type": "library",
   "description": "my php logging tool",
   "keywords": ["logging"],
   "homepage": "https://github.com/mchastainfm/mcgitlog",
@@ -15,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "mclog": "src/"
+      "Mclog": "src/"
     }
   }
 }
