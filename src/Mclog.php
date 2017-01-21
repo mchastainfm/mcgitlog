@@ -1,6 +1,6 @@
 <?php
 
-namespace Mclog;
+namespace Mclog\;
 
 class mclog
 {
