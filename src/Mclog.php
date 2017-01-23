@@ -22,8 +22,8 @@ class mclog
 
 
         $t = time();
-        exec("cp /vagrant/mclog/log.json /vagrant/mclog/logb.json");
-            file_put_contents(./log.json', "{\"" . $logname . "\": \"" .  date("Y-m-d h:i:sa",$t) ."\"\n\n");
+        exec("cp ./log.json ./logb.json");
+            file_put_contents('./log.json', "{\"" . $logname . "\": \"" .  date("Y-m-d h:i:sa",$t) ."\"\n\n");
         }
 
 }
