@@ -4,7 +4,7 @@ namespace Mclog;
 
 class mclog
 {
-  const LOGPATH = "/var/log/mclog.json";
+  const LOGPATH = "./mclog/mclog.json";
     public function __construct()
         {
             return "mclog construct run";
@@ -16,15 +16,15 @@ class mclog
                 $toLog = (array) $logVar;
             }
 
-            file_put_contents($this::LOGPATH, "{\n" . $logMessage . ":  " .  json_encode($toLog, JSON_PRETTY_PRINT)  . "\n\n}" . $end, FILE_APPEND);
+            file_put_contents(\Mclog\mclog::LOGPATH, "{\n" . $logMessage . ":  " .  json_encode($toLog, JSON_PRETTY_PRINT)  . "\n\n}" . $end, FILE_APPEND);
         }
     public static function startLog($logname = '')
         {
 
 
         $t = time();
-       // exec("cp ./log.json ./logb.json");
-            file_put_contents('./log.json', "{\"" . $logname . "\": \"" .  date("Y-m-d h:i:sa",$t) ."\"\n\n");
+
+            file_put_contents(\Mclog\mclog::LOGPATH, "{" . $logname . "\": \"" .  date("Y-m-d h:i:sa",$t) ."\"\n\n");
         }
 
 }
